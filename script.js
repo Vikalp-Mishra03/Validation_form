@@ -63,3 +63,12 @@ function ValidateMessage() {
     messageError.innerHTML = '<i class="fas fa-check-circle"></i>';
     return true
 }
+function ValidateForm(){
+   if(!ValidateName() || !ValidatePhone() || !ValidateEmail() || !ValidateMessage()){
+
+    submitError.style.display = "block"
+    submitError.innerHTML = "Please fix error to submit"
+    setTimeout(function(){ submitError.style.display = "none"},3000)
+    return false
+   }
+}
